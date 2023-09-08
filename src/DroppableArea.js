@@ -20,11 +20,11 @@ const DroppableArea = ({ children, style, acceptedItem, withSpacing, id }) => {
       return;
     }
     if (e.target.id !== "items-container") {
-      // source.style.width = "100%";
-      // source.style.height = "100%";
+      source.style.position = "absolute";
       e.target.appendChild(source);
       return;
     }
+    source.style.position = "relative";
     e.target.appendChild(source);
   };
   return (
